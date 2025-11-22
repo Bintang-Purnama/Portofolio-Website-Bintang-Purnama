@@ -1,30 +1,32 @@
 :root {
   --primary-color: #ff004f;
-  --primary-dark: #d40042; /* Warna sedikit lebih gelap untuk efek hover */
+  --primary-dark: #d40042;
 }
 
 *{
-    margin : 0 ;
-    padding : 0 ;
-    font-family: 'poppins', sans-serif ;
+    margin : 0;
+    padding : 0;
+    font-family: 'poppins', sans-serif;
     box-sizing: border-box;
 }
 body{
     background-color: #080808;
-    color: #fff;;
+    color: #fff;
 }
 
 #header{
     width: 100%;
     height: 100vh;
-    background-image:url(../assets/images/Bintang-porto.png);
+    /* FIXED: Path relative to style.css (same folder level as assets) */
+    background-image: url(assets/images/Bintang-porto.png);
     background-size: cover;
     background-position: center;
 }
+
+/* ... existing code ... */
+
 .container{
     padding: 10px 10%;
-
-
 }
 
 nav{
@@ -32,7 +34,6 @@ nav{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-
 }
 
 .logo{
@@ -71,7 +72,6 @@ nav ul li a:hover::after{
 .header-text{
     margin-top: 20%;
     font-size: 30px;
-    ;
 }
 
 .header-text h1{
@@ -97,17 +97,17 @@ nav ul li a:hover::after{
 
 .btn-more {
     padding: 28px 55px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 26px;
-  transition: all 0.3s ease;
-  display: inline-block;
-  cursor: pointer;
-  border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 26px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
 }
 
-/* Tombol 1: Solid Pink (View My Work) */
+/* Button 1: Solid Pink */
 .btn-more.btn1 {
     background-color: var(--primary-color);
     color: white;
@@ -119,10 +119,10 @@ nav ul li a:hover::after{
     transform: translateY(-3px);
 }
 
-/* Tombol 2: Transparan/Outline (Get In Touch) */
+/* Button 2: Outline */
 .btn-more.btn2 {
     background-color: transparent;
-    color: white; /* Di gambar teksnya putih, bukan pink */
+    color: white;
     border: 2px solid var(--primary-color);
 }
 
@@ -136,14 +136,12 @@ nav ul li a:hover::after{
 #about{
     padding : 80px 0 ;
     color:#abaababa;
-
 }
 
 .row{
     display: flex;
     justify-content: space-between;
     flex-wrap:wrap;
-
 }
 
 .about-col-1{
@@ -427,12 +425,12 @@ form btn2{
 /* ------------------ css for small screen (responsive)-------------------- */
 nav  .fa{
     display: none;
-    ;
 }
 
 @media only screen and (max-width:768px){
     #header{
-        background-image: url(../assets/images/phone-background.png);
+        /* FIXED: Path relative to style.css */
+        background-image: url(assets/images/phone-background.png);
     }
     .header-text{
         margin-top : 100%;
